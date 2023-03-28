@@ -6,6 +6,8 @@ import {OrbitControls} from 'OrbitControls'
 
 import {RGBELoader} from 'RGBELoader'
 
+import { DRACOLoader } from 'DRACOLoader';
+
 let camera, scene, renderer;
 
 init();
@@ -55,9 +57,15 @@ function init() {
             render();
 
             // model
-
             const loader = new GLTFLoader();
+
+			const dracoLoader = new DRACOLoader();
+			dracoLoader.setDecoderPath( './three.js-master/three.js-master/examples/jsm/libs/draco/gltf/' );
+
+			loader.setDRACOLoader( dracoLoader );
+
             loader.load( 'assets/Well.gltf', function ( gltf ) {
+            // loader.load( 'assets/LittlestTokyo.glb', function ( gltf ) {
 
                 // scene.scale.set(0.1,0.1,0.1);
                 scene.add( gltf.scene );

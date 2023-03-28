@@ -57,10 +57,13 @@
     grid-column: span 4;
     grid-row: span 4;
     }
-    #gallery > div:nth-child(6n+1) {
-        grid-column: span 4;
-        grid-row: span 4;
+    #gallery > div:nth-child(13) {
+      grid-column: span 4;
+      grid-row: span 4;
     }
+
+
+
 
   }
   @media (max-width: 550px) {
@@ -134,6 +137,9 @@
     align-items: center;
     justify-content: center;
     pointer-events: none;
+
+    z-index: 2;
+    
   }
   [id^=lightbox-]:target {
     opacity: 1;
@@ -196,8 +202,8 @@
     width: 2em;
     height: 2em;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 25px;
+    top: 25px;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
