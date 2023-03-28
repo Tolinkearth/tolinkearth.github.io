@@ -64,10 +64,10 @@ function init() {
 
 			loader.setDRACOLoader( dracoLoader );
 
-            loader.load( 'assets/Well.gltf', function ( gltf ) {
+            loader.load( 'assets/LittlestTokyo.glb', function ( gltf ) {
             // loader.load( 'assets/LittlestTokyo.glb', function ( gltf ) {
 
-                // scene.scale.set(0.1,0.1,0.1);
+                scene.scale.set(0.01,0.01,0.01);
                 scene.add( gltf.scene );
 
                 render();
